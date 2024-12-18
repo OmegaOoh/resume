@@ -1,0 +1,32 @@
+@page {
+    size: 7in 9.25in;
+    margin: 27mm 16mm 27mm 16mm;
+}
+
+div.frame {
+    margin: 2.5%;
+    font-family: Helvetica;
+}
+
+div.grid-2c {
+    display: grid;
+    column-gap: 5%;
+    grid-template-columns: auto auto;
+    align-items: start;
+}
+
+h1 {
+    text-align: left;
+    color: rgba(35, 155, 86);
+    margin:0;
+}
+
+h2 {
+    text-align: left;
+    font-size: medium;
+    margin-top: 0.5rem;
+}
+
+hr.solid {
+    border-top: 3px solid;
+}
