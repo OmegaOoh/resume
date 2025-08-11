@@ -2,141 +2,158 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=210mm, initial-scale=1.0">
     <title>Sirapob Phasut | Resume</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media print {
+            html, body {
+                width: 210mm;
+                min-height: 297mm;
+                max-width: 210mm;
+                margin: 0;
+                padding: 0;
+                background: white !important;
+                color: black !important;
+                font-size: 10pt;
+            }
+            .a4-print {
+                width: 190mm !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+                background: white !important;
+            }
+            header, main, section, aside, .break-inside, .resume-block, li {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+            .print-shadow-none { box-shadow: none !important; }
+            .print\:text-xs { font-size: 10px !important; }
+            .print\:space-y-1 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.25rem !important; }
+        }
+    </style>
 </head>
-<body>
-<div class="frame">
-    <header>
-        <div class="grid-2c">
-            <div class="grid-content">
-                <h1 class="name">SIRAPOB PHASUT</h1>
-                <h2 class="det" style="font-size: medium">Software and Knowledge Engineering Student</h2>
-                <h3 class="det" style="font-size: smaller">2023 - Present</h3>
-                <p class="contact">Samut Prakan, Thailand</p>
+<body class="text-gray-900 font-sans bg-gray-50 print:bg-white print:text-black">
+<div class="a4-print mx-auto my-4 p-6 bg-white shadow-lg rounded-lg print:shadow-none print:rounded-none print:p-2 print:m-0 print:max-w-full print:w-full print:text-xs" style="width:80vw;">
+    <header class="resume-block">
+        <div class="grid grid-cols-1 gap-4 items-center">
+            <div>
+                <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 print:text-2xl">SIRAPOB PHASUT</h1>
+                <h2 class="text-lg font-medium text-gray-700 mt-1 print:text-base">Software and Knowledge Engineering Student</h2>
+                <h3 class="text-base text-gray-500 mt-1 print:text-sm">2023 - Present</h3>
+                <p class="text-gray-600 mt-2 print:text-xs">Samut Prakan, Thailand</p>
             </div>
-            <div class="grid-2c">
+            <div class="grid grid-cols-2 gap-4">
                 <div>
-                    <p class="contact">
-                        <img src="email.svg" alt="Email" style="vertical-align:middle">
-                        <span>omegaooh@gmail.com</span>
+                    <p class="flex items-center gap-2 text-gray-700 print:text-xs">
+                        <img src="email.svg" alt="Email" class="w-5 h-5 inline align-middle print:w-4 print:h-4">
+                        <span class="select-all">omegaooh@gmail.com</span>
                     </p>
-                    <p class="contact">
-                        <img src="tel.svg" alt="Phone" style="vertical-align:middle">
+                    <p class="flex items-center gap-2 text-gray-700 mt-2 print:text-xs">
+                        <img src="tel.svg" alt="Phone" class="w-5 h-5 inline align-middle print:w-4 print:h-4">
                         <span>(+66)86 305 7329</span>
                     </p>
                 </div>
                 <div>
-                    <p class="contact">
-                        <img src="linkedin.svg" alt="LinkedIn" style="vertical-align:middle">
-                        <a href="https://www.linkedin.com/in/sirapob-phasut-ba5649323/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <p class="flex items-center gap-2 text-gray-700 print:text-xs">
+                        <img src="linkedin.svg" alt="LinkedIn" class="w-5 h-5 inline align-middle print:w-4 print:h-4">
+                        <a href="https://www.linkedin.com/in/sirapob-phasut-ba5649323/" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">LinkedIn</a>
                     </p>
-                    <p class="contact">
-                        <img src="github.svg" alt="GitHub" style="vertical-align:middle">
-                        <a href="https://github.com/OmegaOoh/" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <p class="flex items-center gap-2 text-gray-700 mt-2 print:text-xs">
+                        <img src="github.svg" alt="GitHub" class="w-5 h-5 inline align-middle print:w-4 print:h-4">
+                        <a href="https://github.com/OmegaOoh/" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">GitHub</a>
                     </p>
                 </div>
             </div>
         </div>
-        <hr class="solid">
+        <hr class="my-6 border-gray-300 print:my-2">
     </header>
-    <main>
-        <div class="grid-2ca">
-            <section class="grid-al">
-                <div>
-                    <h2>Career Objective</h2>
-                    <hr class="solid_l">
-                    <p>
+    <main class="resume-block">
+        <!-- Single column for both web and print -->
+        <div class="flex flex-col gap-8 print:gap-2">
+            <section class="space-y-8 print:space-y-1 resume-block">
+                <div class="break-inside resume-block">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-1 print:text-lg">Career Objective</h2>
+                    <hr class="mb-3 border-gray-200 print:mb-1">
+                    <p class="print:text-xs">
                         Highly motivated Software and Knowledge Engineering student at Kasetsart University searching for internship opportunities to gain experience in software development in corporate environments.<br>
                         My long-term goal is to become a versatile software engineer who can work on various projects regardless of the technology used.
                     </p>
                 </div>
-                <div>
-                    <h2>Experience</h2>
-                    <hr class="solid_l">
-                    <ul>
-                        <li>
-                            <h3>WordPress Developer Intern, Kasetsart University</h3>
-                            <p class="time-range">Jun 2025 – Aug 2025</p>
-                            <ul>
-                                <li>Developed and maintained custom WordPress themes and plugins for university departments</li>
-                                <li>Worked closely with faculty to gather requirements and deliver user-friendly solutions</li>
-                                <li>Improved website performance and accessibility</li>
+                <div class="break-inside resume-block">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-1 print:text-lg">Experience</h2>
+                    <hr class="mb-3 border-gray-200 print:mb-1">
+                    <ul class="list-disc pl-5 space-y-2 print:space-y-1 print:text-xs">
+                        <li class="resume-block">
+                            <h3 class="text-lg font-bold text-gray-800 print:text-base">WordPress Developer Intern, Kasetsart University</h3>
+                            <p class="text-sm text-gray-500 print:text-xs">Jun 2025 - Aug 2025</p>
+                            <ul class="list-inside list-disc pl-5 mt-1 space-y-1 print:space-y-0 print:text-xs">
+                                <li>Developed custom WordPress pages template for university departments</li>
                             </ul>
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <h2>Projects</h2>
-                    <hr class="solid_l">
-                    <ul>
-                        <li>
-                            <h3>Text Editor</h3>
-                            <p class="time-range">Ongoing (Side Project)</p>
-                            <p class="pr-detail">&emsp; Cross-platform text editor built with Python and Tkinter, supporting syntax highlighting and file management.</p>
-                            <ul class="pr-detail">
+                <div class="break-inside resume-block">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-1 print:text-lg">Projects</h2>
+                    <hr class="mb-3 border-gray-200 print:mb-1">
+                    <ul class="space-y-6 print:space-y-1">
+                        <li class="resume-block">
+                            <h3 class="text-lg font-bold text-gray-800 print:text-base">Text Editor</h3>
+                            <p class="text-sm text-gray-500 print:text-xs">Ongoing (Side Project)</p>
+                            <p class="pr-detail print:text-xs">&emsp; Cross-platform text editor built with Tauri 2.0 and Rust</p>
+                            <ul class="list-inside list-disc pl-5 mt-1 space-y-1 pr-detail print:space-y-0 print:text-xs">
                                 <li>Standalone desktop application</li>
-                                <li>Syntax highlight for multiple languages</li>
-                                <li>Tab and multi-file management</li>
                             </ul>
-                            <br>
-                            <span class="pr-detail">Repository:
-                                <a href="https://github.com/OmegaOoh/text-editor" target="_blank" rel="noopener noreferrer">
-                                    https://github.com/OmegaOoh/text-editor
-                                </a>
+                            <span class="pr-detail block mt-2 print:mt-1 print:text-xs">Repository:
+                                <a href="https://github.com/OmegaOoh/text-editor" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">https://github.com/OmegaOoh/text-editor</a>
                             </span>
                         </li>
-                        <li>
-                            <h3>Traffic Flow Analysis</h3>
-                            <p class="time-range">Apr 2025</p>
-                            <p class="pr-detail">&emsp; Data analysis project visualizing urban traffic flow using Python, Pandas, and Matplotlib.</p>
-                            <ul class="pr-detail">
+                        <li class="resume-block">
+                            <h3 class="text-lg font-bold text-gray-800 print:text-base">Traffic Flow Analysis</h3>
+                            <p class="text-sm text-gray-500 print:text-xs">Apr 2025</p>
+                            <p class="pr-detail print:text-xs">&emsp; Data analysis project visualizing urban traffic flow using Python, Pandas, and Matplotlib.</p>
+                            <ul class="list-inside list-disc pl-5 mt-1 space-y-1 pr-detail print:space-y-0 print:text-xs">
                                 <li>Processed real-world traffic datasets</li>
-                                <li>Generated interactive plots and heatmaps</li>
+                                <li>Generated interactive plots</li>
+                                <li>Predict traffic data from weather and time.</li>
                             </ul>
-                            <br>
-                            <span class="pr-detail">Repository:
-                                <a href="https://github.com/OmegaOoh/traffic-flow-analysis" target="_blank" rel="noopener noreferrer">
-                                    https://github.com/OmegaOoh/traffic-flow-analysis
-                                </a>
+                            <span class="pr-detail block mt-2 print:mt-1 print:text-xs">Repository:
+                                <a href="https://github.com/OmegaOoh/traffic-flow-analysis" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">https://github.com/OmegaOoh/traffic-flow-analysis</a>
                             </span>
                         </li>
-                        <li>
-                            <h3>KU-Tangtee Web Projects</h3>
-                            <p class="time-range">Oct 2024 - Early Dec 2024</p>
-                            <p class="pr-detail">&emsp; Web applications powered by Django and Vue.js to gather people for events or activities for KU students.</p>
-                            <ul class="pr-detail">
+                        <li class="resume-block">
+                            <h3 class="text-lg font-bold text-gray-800 print:text-base">KU-Tangtee Web Projects</h3>
+                            <p class="text-sm text-gray-500 print:text-xs">Oct 2024 - Early Dec 2024</p>
+                            <p class="pr-detail print:text-xs">&emsp; Web applications powered by Django and Vue.js to gather people for events or activities for KU students.</p>
+                            <ul class="list-inside list-disc pl-5 mt-1 space-y-1 pr-detail print:space-y-0 print:text-xs">
                                 <li>Developed in team of four as a part of Individual software development process courses.</li>
-                                <li>Using Agile as software development process. </li>
+                                <li>Using Agile as software development process.</li>
                                 <li>Working as Full-stack developer.</li>
                                 <li>Application Features:</li>
-                                <ul>
+                                <ul class="list-inside list-disc pl-5 space-y-1 print:space-y-0 print:text-xs">
                                     <li>Realtime Chat</li>
                                     <li>Google OAuth Login</li>
                                 </ul>
                             </ul>
-                            <br>
-                            <span class="pr-detail">Repository:
-                                <a href="https://github.com/OmegaOoh/ku-tangtee" target="_blank" rel="noopener noreferrer">
-                                    https://github.com/OmegaOoh/ku-tangtee
-                                </a>
+                            <span class="pr-detail block mt-2 print:mt-1 print:text-xs">Repository:
+                                <a href="https://github.com/OmegaOoh/ku-tangtee" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">https://github.com/OmegaOoh/ku-tangtee</a>
                             </span>
                         </li>
                     </ul>
                 </div>
             </section>
-            <aside class="grid-ar">
-                <div>
-                    <h2>Education</h2>
-                    <hr class="solid_l">
-                    <h4>2023 - Present</h4>
-                    <p>Software and Knowledge Engineering, Kasetsart University</p>
+            <aside class="space-y-8 print:space-y-1 resume-block">
+                <div class="break-inside resume-block">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-1 print:text-lg">Education</h2>
+                    <hr class="mb-3 border-gray-200 print:mb-1">
+                    <h4 class="font-medium text-gray-700 print:text-base">2023 - Present</h4>
+                    <p class="text-gray-600 print:text-xs">Software and Knowledge Engineering, Kasetsart University</p>
                 </div>
-                <div>
-                    <h2>Relevant Courses</h2>
-                    <hr class="solid_l">
-                    <ul>
+                <div class="break-inside resume-block">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-1 print:text-lg">Relevant Courses</h2>
+                    <hr class="mb-3 border-gray-200 print:mb-1">
+                    <ul class="list-disc pl-5 space-y-1 print:space-y-0 print:text-xs">
                         <li>Discrete Mathematics and Linear Algebra</li>
                         <li>Computer Programming I &amp; II</li>
                         <li>Data Structure and Algorithm I &amp; II</li>
@@ -145,10 +162,10 @@
                         <li>Data Science and Big Data Analytics</li>
                     </ul>
                 </div>
-                <div>
-                    <h2>Skills</h2>
-                    <hr class="solid_l">
-                    <ul>
+                <div class="break-inside resume-block">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-1 print:text-lg">Skills</h2>
+                    <hr class="mb-3 border-gray-200 print:mb-1">
+                    <ul class="list-disc pl-5 space-y-1 print:space-y-0 print:text-xs">
                         <li><strong>Python</strong> (Django, Pandas, Tkinter, Pytest, Selenium)</li>
                         <li><strong>JavaScript/TypeScript</strong> (Vue.js, React)</li>
                         <li><strong>C++</strong> (Unreal Engine)</li>
@@ -158,13 +175,13 @@
                         <li><strong>Git</strong></li>
                     </ul>
                 </div>
-                <div>
-                    <h2>Activities</h2>
-                    <hr class="solid_l">
-                    <ul>
+                <div class="break-inside resume-block">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-1 print:text-lg">Activities</h2>
+                    <hr class="mb-3 border-gray-200 print:mb-1">
+                    <ul class="list-disc pl-5 space-y-1 print:space-y-0 print:text-xs">
                         <li>Teaching Assistant, Init Me #6.1</li>
                         <li>Secretary of board of directors for SKE21</li>
-                        <li>Organizer, <a href="https://www.instagram.com/sos_camp13/" target="_blank" rel="noopener noreferrer">SOS camp 13</a></li>
+                        <li>Organizer, <a href="https://www.instagram.com/sos_camp13/" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">SOS camp 13</a></li>
                         <li>Photographer, CPSK Firstmeet 2024</li>
                     </ul>
                 </div>
