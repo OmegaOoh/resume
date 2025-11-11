@@ -1,3 +1,4 @@
+/* Original styles */
 div.frame {
     margin: 2.5%;
     font-family: Helvetica;
@@ -13,25 +14,24 @@ div.grid-2c {
 div.grid-2ca {
     display: grid;
     column-gap: 1%;
-    grid-template-areas: 'left left right right';
+    grid-template-areas: "left left right right";
     align-items: start;
-    
 }
 
 .grid-al {
     padding: 1%;
-    grid-area:left;
-    border-right: 3px solid
+    grid-area: left;
+    border-right: 3px solid;
 }
 .grid-ar {
     padding: 1%;
-    grid-area:right;
+    grid-area: right;
 }
 
 h1.name {
     text-align: left;
     color: rgba(35, 155, 86);
-    font-size:x-large;
+    font-size: x-large;
     margin: 0px;
 }
 
@@ -42,7 +42,7 @@ h2.det {
 }
 h2 {
     text-align: left;
-    font-size:large;
+    font-size: large;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
@@ -54,7 +54,7 @@ h3 {
 }
 
 .time-range {
-    font-size:smaller;
+    font-size: smaller;
     font-weight: bold;
     margin-top: 0.25rem;
     margin-bottom: 0.05rem;
@@ -66,11 +66,11 @@ h3 {
 }
 
 p.pr-detail {
-    margin-left: 0.5em
+    margin-left: 0.5em;
 }
 
 .contact {
-    font-size:smaller
+    font-size: smaller;
 }
 
 hr.solid {
@@ -81,9 +81,108 @@ hr.solid_l {
 }
 
 p {
-    font-size: small
+    font-size: small;
 }
 
 li {
-    font-size: small
+    font-size: small;
+}
+
+/* Print styles */
+@media print {
+    html,
+    body {
+        width: 210mm;
+        min-height: 297mm;
+        max-width: 210mm;
+        margin: 0;
+        padding: 0;
+        background: white !important;
+        color: black !important;
+        font-size: 10pt;
+    }
+    .a4-print {
+        width: 190mm !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        background: white !important;
+    }
+    header,
+    main,
+    section,
+    aside,
+    .break-inside,
+    .resume-block,
+    li {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+    .print-shadow-none {
+        box-shadow: none !important;
+    }
+    .print\:text-xs {
+        font-size: 10px !important;
+    }
+    .print\:space-y-1 > :not([hidden]) ~ :not([hidden]) {
+        margin-top: 0.25rem !important;
+    }
+}
+
+/* Profile image styles */
+.profile-image {
+    transition: opacity 0.3s ease-in-out;
+    width: 180px !important;
+    height: 180px !important;
+}
+
+.profile-image.hidden {
+    opacity: 0;
+}
+
+/* Header layout adjustments */
+.header-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile-section {
+    flex-shrink: 0;
+}
+
+.info-section {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.contact-section p {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+@media print {
+    .profile-image {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .header-layout {
+        gap: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .contact-section {
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
 }

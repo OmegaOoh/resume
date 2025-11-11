@@ -1,38 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=210mm, initial-scale=1.0">
     <title>Sirapob Phasut | Resume</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @media print {
-            html, body {
-                width: 210mm;
-                min-height: 297mm;
-                max-width: 210mm;
-                margin: 0;
-                padding: 0;
-                background: white !important;
-                color: black !important;
-                font-size: 10pt;
-            }
-            .a4-print {
-                width: 190mm !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                box-shadow: none !important;
-                background: white !important;
-            }
-            header, main, section, aside, .break-inside, .resume-block, li {
-                page-break-inside: avoid !important;
-                break-inside: avoid !important;
-            }
-            .print-shadow-none { box-shadow: none !important; }
-            .print\:text-xs { font-size: 10px !important; }
-            .print\:space-y-1 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.25rem !important; }
-        }
-    </style>
 </head>
 <body class="text-gray-900 font-sans bg-gray-50 print:bg-white print:text-black">
 <div class="a4-print mx-auto my-4 p-6 bg-white shadow-lg rounded-lg print:shadow-none print:rounded-none print:p-2 print:m-0 print:max-w-full print:w-full print:text-xs" style="width:80vw;">
@@ -170,35 +143,378 @@
                         <p class="text-gray-800 font-bold print:text-base">Software and Knowledge Engineering, Kasetsart University</p>
                         <h4 class="font-medium text-gray-700 print:text-sm">2023 - Now</h4>
                     </div>
-                    <ul class="list-disc pl-5 space-y-1 print:space-y-0 print:text-sm">
-                        <li>Cumulative GPA: 3.80 / 4.00</li>
-                        <li>Relevant Courses: Computer Programming I &amp; II, Data Structure and Algorithm I &amp; II, Discrete Mathematics and Linear Algebra, Data Analytics, Database Systems, Individual Software Development Process, Collaborative Software Process and Project Management</li>
-                    </ul>
                 </div>
-                <div class="break-inside resume-block">
-                    <h2 class="text-2xl font-semibold text-gray-800 mb-1 print:text-lg">Skills &amp; Tools</h2>
-                    <hr class="mb-3 border-[1.5px] border-gray-400 rounded print:mb-1">
-                    <ul class="list-disc pl-5 space-y-1 print:space-y-0 print:text-sm">
-                        <li><strong>Programming Languages: </strong> Python, JavaScript/Typescript, C++, Golang, Rust, Java</li>
-                        <li><strong>Frameworks: </strong> Django, Gin, Vue.js, React, Tauri 2.0, Unreal Engine</li>
-                        <li><strong>Tools: </strong>Git, SQL, MongoDB, Pytest, Selenium, Cypress, Docker</li>
-                        <li><strong>Language: </strong> Thai (Native), English (IELTS Overall: 7.5)</li>
-                    </ul>
+                <hr
+                    class="my-6 border-[1.5px] border-gray-500 rounded print:my-2"
+                />
+            </header>
+            <script>
+                function toggleProfileImage() {
+                    const profileImage =
+                        document.getElementById("profileImage");
+                    profileImage.classList.toggle("hidden");
+                }
+            </script>
+            <main class="resume-block">
+                <!-- Single column for both web and print -->
+                <div class="flex flex-col gap-8 print:gap-2">
+                    <section class="space-y-8 print:space-y-1 resume-block">
+                        <div class="break-inside resume-block">
+                            <h2
+                                class="text-2xl font-semibold text-gray-800 mb-1 print:text-lg"
+                            >
+                                Summary
+                            </h2>
+                            <hr
+                                class="mb-3 border-[1.5px] border-gray-400 rounded print:mb-1"
+                            />
+                            <p class="print:text-sm">
+                                <strong
+                                    >Versatile Software and Knowledge
+                                    Engineering student</strong
+                                >
+                                with strong foundation in full-stack development
+                                with experience in popular Backend frameworks
+                                such as Gin and Django and Frontend Technologies
+                                such as Vue.js, Nuxt and React. Experienced in
+                                leading development team, managing agile
+                                workflow, and building application from concept
+                                to working product. Eager to apply skills and
+                                knowledge to real-world project and continue
+                                developing my software engineering skills.
+                            </p>
+                        </div>
+                        <div class="break-inside resume-block">
+                            <h2
+                                class="text-2xl font-semibold text-gray-800 mb-1 print:text-lg"
+                            >
+                                Experience
+                            </h2>
+                            <hr
+                                class="mb-3 border-[1.5px] border-gray-400 rounded print:mb-1"
+                            />
+                            <ul
+                                class="list-disc pl-5 space-y-2 print:space-y-1 print:text-sm"
+                            >
+                                <li class="resume-block">
+                                    <div
+                                        class="flex flex-row justify-between mb-2"
+                                    >
+                                        <h3
+                                            class="text-lg font-bold text-gray-800 print:text-base"
+                                        >
+                                            Teaching Assistant, Kasetsart
+                                            University
+                                        </h3>
+                                        <p
+                                            class="text-sm text-gray-700 print:text-sm"
+                                        >
+                                            Aug 2025 - Now
+                                        </p>
+                                    </div>
+                                    <ul
+                                        class="list-inside list-disc pl-5 mt-1 space-y-1 print:space-y-0 print:text-sm"
+                                    >
+                                        <li>
+                                            Mentor 60+ students in the
+                                            Individual Software Development
+                                            Process Course as part of a 6-person
+                                            TA team, guiding their project
+                                            progress and application of the
+                                            software development lifecycle
+                                            through weekly feedback meetings.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="resume-block">
+                                    <div
+                                        class="flex flex-row justify-between mb-2"
+                                    >
+                                        <h3
+                                            class="text-lg font-bold text-gray-800 print:text-base"
+                                        >
+                                            WordPress Developer Intern,
+                                            Kasetsart University
+                                        </h3>
+                                        <p
+                                            class="text-sm text-gray-700 print:text-sm"
+                                        >
+                                            Jun 2025 - Aug 2025
+                                        </p>
+                                    </div>
+                                    <ul
+                                        class="list-inside list-disc pl-5 mt-1 space-y-1 print:space-y-0 print:text-sm"
+                                    >
+                                        <li>
+                                            Designed and developed custom
+                                            WordPress pages (SKE Overview Page)
+                                            template for Department of Computer
+                                            Engineering, resulting in more
+                                            user-friendly and appealing program
+                                            overview page
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="break-inside resume-block">
+                            <h2
+                                class="text-2xl font-semibold text-gray-800 mb-1 print:text-lg"
+                            >
+                                Projects
+                            </h2>
+                            <hr
+                                class="mb-3 border-[1.5px] border-gray-400 rounded print:mb-1"
+                            />
+                            <ul class="space-y-6 print:space-y-1">
+                                <li class="resume-block">
+                                    <div
+                                        class="flex flex-row justify-between mb-2"
+                                    >
+                                        <h3
+                                            class="text-lg font-bold text-gray-800 print:text-base"
+                                        >
+                                            KU-Work
+                                        </h3>
+                                        <p
+                                            class="text-sm text-gray-700 print:text-sm"
+                                        >
+                                            Aug 2025 - Now
+                                        </p>
+                                    </div>
+                                    <ul
+                                        class="list-inside list-disc pl-5 mt-1 space-y-1 print:space-y-0 print:text-sm"
+                                    >
+                                        <li>
+                                            As part of Collaborative Software
+                                            Process and Project Management
+                                            course, Lead team of four to develop
+                                            job-seeking platform using
+                                            <strong>Gin</strong>(Backend) and
+                                            <strong>Nuxt</strong>(Frontend).
+                                        </li>
+                                        <li>
+                                            Implemented backend API with
+                                            Authentication flow using both
+                                            password and Google's OAuth2.
+                                        </li>
+                                        <li>
+                                            Followed Agile Methodology to
+                                            deliver features like Google OAuth2,
+                                            Student and Post verification flow
+                                            with AI.
+                                        </li>
+                                        <span
+                                            class="pr-detail block mt-2 print:mt-1 print:text-sm"
+                                            ><strong>Repository:</strong>
+                                            <a
+                                                href="https://github.com/Yet-Another-Software-Team/ku-work"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="text-blue-600 underline"
+                                                >https://github.com/Yet-Another-Software-Team/ku-work</a
+                                            >
+                                        </span>
+                                    </ul>
+                                </li>
+                                <li class="resume-block">
+                                    <div
+                                        class="flex flex-row justify-between mb-2"
+                                    >
+                                        <h3
+                                            class="text-lg font-bold text-gray-800 print:text-base"
+                                        >
+                                            Traffic Flow Analysis
+                                        </h3>
+                                        <p
+                                            class="text-sm text-gray-700 print:text-sm"
+                                        >
+                                            Apr 2025
+                                        </p>
+                                    </div>
+                                    <ul
+                                        class="list-inside list-disc pl-5 mt-1 space-y-1 print:space-y-0 print:text-sm"
+                                    >
+                                        <li>
+                                            Implemented a web-based traffic flow
+                                            analysis platform using
+                                            <strong>Vue</strong> and
+                                            <strong>Rocket(Rust)</strong>.
+                                        </li>
+                                        <li>
+                                            Trained a traffic prediction model
+                                            using <strong>Pytorch</strong> using
+                                            <strong
+                                                >Recurrent Neural
+                                                Networks</strong
+                                            >.
+                                        </li>
+                                        <span
+                                            class="pr-detail block mt-2 print:mt-1 print:text-sm"
+                                            ><strong>Repository:</strong>
+                                            <a
+                                                href="https://github.com/OmegaOoh/traffic-flow-analysis"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="text-blue-600 underline"
+                                                >https://github.com/OmegaOoh/traffic-flow-analysis</a
+                                            >
+                                        </span>
+                                    </ul>
+                                </li>
+                                <li class="resume-block">
+                                    <div
+                                        class="flex flex-row justify-between mb-2"
+                                    >
+                                        <h3
+                                            class="text-lg font-bold text-gray-800 print:text-base"
+                                        >
+                                            KU-Tangtee Web Projects
+                                        </h3>
+                                        <p
+                                            class="text-sm text-gray-700 print:text-sm"
+                                        >
+                                            Oct 2024 - Early Dec 2024
+                                        </p>
+                                    </div>
+                                    <ul
+                                        class="list-inside list-disc pl-5 mt-1 space-y-1 print:space-y-0 print:text-sm"
+                                    >
+                                        <li>
+                                            Designed and delivered a web
+                                            application to connect Kasetsart
+                                            University students for events and
+                                            activities, powered by
+                                            <strong>Django</strong> and
+                                            <strong>Vue</strong> following agile
+                                            methodologies.
+                                        </li>
+                                        <li>
+                                            Implemented a real-time chat feature
+                                            using Websocket technology.
+                                        </li>
+                                        <li>
+                                            Integrated Google OAuth login for
+                                            user authentication.
+                                        </li>
+                                        <span
+                                            class="pr-detail block mt-2 print:mt-1 print:text-sm"
+                                            >Repository:
+                                            <a
+                                                href="https://github.com/OmegaOoh/ku-tangtee"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="text-blue-600 underline"
+                                                >https://github.com/OmegaOoh/ku-tangtee</a
+                                            >
+                                        </span>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <aside class="space-y-8 print:space-y-1 resume-block">
+                        <div class="break-inside resume-block">
+                            <h2
+                                class="text-2xl font-semibold mb-1 print:text-lg"
+                            >
+                                Education
+                            </h2>
+                            <hr
+                                class="mb-3 border-[1.5px] border-gray-800 rounded print:mb-1"
+                            />
+                            <div class="flex flex-row justify-between">
+                                <p
+                                    class="text-gray-800 font-bold print:text-base"
+                                >
+                                    Software and Knowledge Engineering,
+                                    Kasetsart University
+                                </p>
+                                <h4
+                                    class="font-medium text-gray-700 print:text-sm"
+                                >
+                                    2023 - Now
+                                </h4>
+                            </div>
+                            <ul
+                                class="list-disc pl-5 space-y-1 print:space-y-0 print:text-sm"
+                            >
+                                <li>Cumulative GPA: 3.80 / 4.00</li>
+                                <li>
+                                    Relevant Courses: Computer Programming I
+                                    &amp; II, Data Structure and Algorithm I
+                                    &amp; II, Discrete Mathematics and Linear
+                                    Algebra, Data Analytics, Database Systems,
+                                    Individual Software Development Process,
+                                    Collaborative Software Process and Project
+                                    Management
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="break-inside resume-block">
+                            <h2
+                                class="text-2xl font-semibold text-gray-800 mb-1 print:text-lg"
+                            >
+                                Skills &amp; Tools
+                            </h2>
+                            <hr
+                                class="mb-3 border-[1.5px] border-gray-400 rounded print:mb-1"
+                            />
+                            <ul
+                                class="list-disc pl-5 space-y-1 print:space-y-0 print:text-sm"
+                            >
+                                <li>
+                                    <strong>Programming Languages: </strong>
+                                    Python, JavaScript/Typescript, C++, Golang,
+                                    Rust, Java
+                                </li>
+                                <li>
+                                    <strong>Frameworks: </strong> Django, Gin,
+                                    Vue.js, React, Tauri 2.0, Unreal Engine
+                                </li>
+                                <li>
+                                    <strong>Tools: </strong>Git, SQL, MongoDB,
+                                    Pytest, Selenium, Cypress, Docker
+                                </li>
+                                <li>
+                                    <strong>Language: </strong> Thai (Native),
+                                    English (IELTS Overall: 7.5)
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="break-inside resume-block">
+                            <h2
+                                class="text-2xl font-semibold text-gray-800 mb-1 print:text-lg"
+                            >
+                                Activities
+                            </h2>
+                            <hr
+                                class="mb-3 border-[1.5px] border-gray-400 rounded print:mb-1"
+                            />
+                            <ul
+                                class="list-disc pl-5 space-y-1 print:space-y-0 print:text-sm"
+                            >
+                                <li>Judge Assistant, CPSK Code Party 2025</li>
+                                <li>Teaching Assistant, Init Me #6.1</li>
+                                <li>
+                                    Secretary of board of directors for SKE21
+                                </li>
+                                <li>
+                                    Organizer,
+                                    <a
+                                        href="https://www.instagram.com/sos_camp13/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-blue-600 underline"
+                                        >SOS camp 13</a
+                                    >
+                                </li>
+                                <li>Photographer, CPSK Firstmeet 2024</li>
+                            </ul>
+                        </div>
+                    </aside>
                 </div>
-                <div class="break-inside resume-block">
-                    <h2 class="text-2xl font-semibold text-gray-800 mb-1 print:text-lg">Activities</h2>
-                    <hr class="mb-3 border-[1.5px] border-gray-400 rounded print:mb-1">
-                    <ul class="list-disc pl-5 space-y-1 print:space-y-0 print:text-sm">
-                        <li>Judge Assistant, CPSK Code Party 2025</li>
-                        <li>Teaching Assistant, Init Me #6.1</li>
-                        <li>Secretary of board of directors for SKE21</li>
-                        <li>Organizer, <a href="https://www.instagram.com/sos_camp13/" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">SOS camp 13</a></li>
-                        <li>Photographer, CPSK Firstmeet 2024</li>
-                    </ul>
-                </div>
-            </aside>
+            </main>
         </div>
-    </main>
-</div>
-</body>
+    </body>
 </html>
