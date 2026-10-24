@@ -4,7 +4,7 @@ company = "ExxonMobil"
 period = "Jun 2026 - Present"
 location = "Bangkok, Thailand · On-site"
 highlights = [
-  "Developed a **Terraform** codebase and managed state configurations to provision and continuously update **Confluent Cloud (Apache Kafka)** resources—including service accounts, schemas, topics, and ACLs/RBAC—within the team's event streaming platform.",
+  "Developed a **Terraform** codebase and managed state configurations to provision and continuously update thousands of **Confluent Cloud (Apache Kafka)** resources—including service accounts, schemas, topics, and ACLs/RBAC—across multiple environments.",
   "Built multi-stage **GitHub Actions** CI/CD workflows to automate plan checks and infrastructure deployments, reducing manual restoration overhead and configuration drift."
 ]
 
