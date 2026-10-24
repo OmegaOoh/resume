@@ -320,25 +320,31 @@ export function renderCustomizerClientScript(data: ResumeData): string {
     saveState();
   }
 
-  // Estimate A4 Page Height Usage
+  // Accurate A4 Print Height Usage Calculation
   function updatePageMeter() {
-    const sheet = document.getElementById("resume-sheet");
+    const contentWrapper = document.getElementById("resume-content-wrapper");
+    const ruler = document.getElementById("a4-printable-ruler");
+    const breakLine = document.getElementById("a4-page-break-line");
     const meterText = document.getElementById("a4-meter-text");
     const meterBar = document.getElementById("a4-meter-bar");
-    if (!sheet || !meterText || !meterBar) return;
+    if (!contentWrapper || !meterText || !meterBar) return;
 
-    // Standard A4 height at 96 DPI is ~1122px
-    const a4HeightPx = 1122;
-    const currentHeight = sheet.scrollHeight;
-    const pct = Math.round((currentHeight / a4HeightPx) * 100);
+    // Printable height inside an A4 page (297mm total - 20mm print margins = 277mm)
+    const maxPrintablePx = (ruler && ruler.offsetHeight > 0) ? ruler.offsetHeight : 1047;
+    const currentContentPx = contentWrapper.offsetHeight;
+    const pct = Math.round((currentContentPx / maxPrintablePx) * 100);
 
     meterBar.style.width = Math.min(pct, 100) + "%";
-    if (pct <= 95) {
+    if (breakLine) {
+      breakLine.style.opacity = pct > 95 ? "1" : "0";
+    }
+
+    if (pct <= 96) {
       meterText.textContent = pct + "% of 1 A4 Page (Fits cleanly)";
       meterText.className = "text-xs font-semibold text-emerald-700";
       meterBar.className = "h-2 rounded-full transition-all bg-emerald-500";
-    } else if (pct <= 105) {
-      meterText.textContent = pct + "% of 1 A4 Page (Tight fit - check print preview)";
+    } else if (pct <= 100) {
+      meterText.textContent = pct + "% of 1 A4 Page (Nearly full — fits 1 page)";
       meterText.className = "text-xs font-semibold text-amber-700";
       meterBar.className = "h-2 rounded-full transition-all bg-amber-500";
     } else {

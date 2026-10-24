@@ -91,6 +91,31 @@ li {
     font-size: small;
 }
 
+/* Header layout adjustments */
+.header-layout {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.info-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.contact-section p {
+    margin: 0;
+    flex-shrink: 0;
+}
+
 /* Print styles */
 @media print {
     html,
@@ -130,39 +155,79 @@ li {
     .print\:space-y-1 > :not([hidden]) ~ :not([hidden]) {
         margin-top: 0.25rem !important;
     }
-}
-
-/* Header layout adjustments */
-.header-layout {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-}
-
-.info-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: center;
-}
-
-.contact-section p {
-    margin: 0;
-    flex-shrink: 0;
-}
-
-@media print {
     .header-layout {
         margin-bottom: 0.5rem;
     }
-
     .contact-section {
         gap: 0.5rem;
     }
+}
+
+/* Exact A4 Print Simulation for the Tailoring Workbench (.a4-preview-sheet) */
+.a4-preview-sheet {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 10mm;
+    box-sizing: border-box;
+    background: white;
+    color: black;
+    font-size: 10px;
+    position: relative;
+}
+
+.a4-preview-sheet .header-layout {
+    margin-bottom: 0.5rem;
+}
+
+.a4-preview-sheet .contact-section {
+    gap: 0.5rem;
+}
+
+/* Mirror Tailwind print:* utilities inside .a4-preview-sheet on screen */
+.a4-preview-sheet .print\:text-2xl {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+}
+.a4-preview-sheet .print\:text-lg {
+    font-size: 1.125rem !important;
+    line-height: 1.75rem !important;
+}
+.a4-preview-sheet .print\:text-base {
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+}
+.a4-preview-sheet .print\:text-sm {
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+}
+.a4-preview-sheet .print\:text-xs {
+    font-size: 10px !important;
+}
+.a4-preview-sheet .print\:mt-1 {
+    margin-top: 0.25rem !important;
+}
+.a4-preview-sheet .print\:my-2 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+}
+.a4-preview-sheet .print\:mb-1 {
+    margin-bottom: 0.25rem !important;
+}
+.a4-preview-sheet .print\:gap-2 {
+    gap: 0.5rem !important;
+}
+.a4-preview-sheet .print\:w-4 {
+    width: 1rem !important;
+}
+.a4-preview-sheet .print\:h-4 {
+    height: 1rem !important;
+}
+.a4-preview-sheet .print\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0px !important;
+}
+.a4-preview-sheet .print\:space-y-1 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.25rem !important;
+}
+.a4-preview-sheet .print\:space-y-2 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.5rem !important;
 }

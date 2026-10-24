@@ -82,7 +82,7 @@
             </div>
         </nav>
 
-        <!-- Main Workbench Layout: Sidebar + Live A4 Preview -->
+        <!-- Main Workbench Layout: Sidebar + Live A4 Print-Accurate Preview -->
         <div
             class="max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-6 p-4 print:p-0 print:m-0 print:block"
         >
@@ -92,30 +92,49 @@
                 id="customizer-controls"
             ></div>
 
-            <!-- Right Live A4 Preview Area -->
+            <!-- Right Live A4 Print-Accurate Preview Area -->
             <div class="flex-1 flex justify-center print:block">
                 <div
                     id="resume-sheet"
-                    class="a4-print p-6 bg-white shadow-lg rounded-lg print:shadow-none print:rounded-none print:p-2 print:m-0 print:max-w-full print:w-full print:text-xs"
-                    style="width: 210mm; min-height: 297mm"
+                    class="a4-print a4-preview-sheet shadow-lg rounded-sm print:shadow-none print:rounded-none print:p-2 print:m-0 print:max-w-full print:w-full print:text-xs"
                 >
+                    <!-- Hidden ruler to measure exact 277mm printable height in browser pixels -->
+                    <div
+                        id="a4-printable-ruler"
+                        class="print:hidden pointer-events-none invisible absolute top-0 left-0"
+                        style="height: 277mm; width: 1px"
+                    ></div>
+
+                    <!-- Visual 1-Page A4 boundary line (only visible on screen) -->
+                    <div
+                        id="a4-page-break-line"
+                        class="print:hidden pointer-events-none absolute left-0 right-0 border-b-2 border-dashed border-red-400 opacity-0 transition-opacity flex justify-end pr-2"
+                        style="top: 287mm"
+                    >
+                        <span class="bg-red-50 text-red-600 text-[10px] font-semibold px-1.5 py-0.5 rounded-t border border-b-0 border-red-300 -mt-5">
+                            End of A4 Page 1
+                        </span>
+                    </div>
+
+                    <div id="resume-content-wrapper">
 <!-- HEADER -->
-                    <main class="resume-block">
-                        <div class="flex flex-col gap-8 print:gap-2">
-                            <section
-                                class="space-y-8 print:space-y-1 resume-block"
-                                data-container="main-sections"
-                            >
+                        <main class="resume-block">
+                            <div class="flex flex-col gap-8 print:gap-2">
+                                <section
+                                    class="space-y-8 print:space-y-1 resume-block"
+                                    data-container="main-sections"
+                                >
 <!-- MAIN_SECTIONS -->
-                            </section>
-                            <aside
-                                class="space-y-8 print:space-y-1 resume-block"
-                                data-container="aside-sections"
-                            >
+                                </section>
+                                <aside
+                                    class="space-y-8 print:space-y-1 resume-block"
+                                    data-container="aside-sections"
+                                >
 <!-- ASIDE_SECTIONS -->
-                            </aside>
-                        </div>
-                    </main>
+                                </aside>
+                            </div>
+                        </main>
+                    </div>
                 </div>
             </div>
         </div>
