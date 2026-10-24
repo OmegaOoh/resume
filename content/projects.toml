@@ -1,0 +1,18 @@
+[[projects]]
+name = "KU-Work"
+period = "Aug 2025 - Nov 2025"
+repository = "https://github.com/Yet-Another-Software-Team/ku-work"
+highlights = [
+  "Led a 4-person team to develop a job-seeking platform using **Gin** (Go) for backend APIs and **Nuxt** (Vue.js) for frontend UI.",
+  "Implemented RESTful backend endpoints and authentication workflows supporting password credentials and Google OAuth 2.0.",
+  "Managed project delivery using Agile practices, conducting sprint planning, pull request code reviews, and CI integrations."
+]
+
+[[projects]]
+name = "Traffic Flow Analysis"
+period = "Apr 2025"
+repository = "https://github.com/OmegaOoh/traffic-flow-analysis"
+highlights = [
+  "Developed a web application for traffic flow analysis using **Vue.js** frontend and **Rocket (Rust)** backend API.",
+  "Trained a traffic prediction model using **PyTorch** recurrent neural networks (RNNs) to forecast vehicle movement patterns."
+]

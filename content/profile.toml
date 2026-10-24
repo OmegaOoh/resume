@@ -1,0 +1,28 @@
+name = "SIRAPOB PHASUT"
+title = "Software Engineer | Developer"
+location = "Samut Prakan, Thailand"
+
+[[contacts]]
+icon = "assets/email.svg"
+alt = "Email"
+text = "sirapob.phasut@gmail.com"
+select_all = true
+enabled = true
+
+[[contacts]]
+icon = "assets/tel.svg"
+alt = "Phone"
+text = "(+66)86 305 7329"
+enabled = true
+
+[[contacts]]
+icon = "assets/linkedin.svg"
+alt = "LinkedIn"
+text = "[Sirapob Phasut](https://www.linkedin.com/in/sirapob-phasut-ba5649323/)"
+enabled = true
+
+[[contacts]]
+icon = "assets/github.svg"
+alt = "GitHub"
+text = "[OmegaOoh](https://github.com/OmegaOoh/)"
+enabled = true

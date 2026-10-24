@@ -1,0 +1,29 @@
+[[experience]]
+role = "Application Developer Intern"
+company = "ExxonMobil"
+period = "Jun 2026 - Present"
+location = "Bangkok, Thailand · On-site"
+highlights = [
+  "Developed automated Infrastructure as Code (IaC) solutions using **Terraform** to provision and configure **Confluent Kafka** infrastructure on **Confluent Cloud** within the APIM & Event Streaming team.",
+  "Built multi-job **GitHub Actions** CI/CD workflows for automated validation, syntax checking, and deployment of infrastructure configurations."
+]
+
+[[experience]]
+role = "Teaching Assistant"
+company = "Kasetsart University"
+period = "Aug 2025 - Apr 2026"
+location = "Individual Software Development Process & Principal of Software Design"
+highlights = [
+  "Mentored 60+ undergraduate students across Individual Software Development Process and Principal of Software Design courses.",
+  "Evaluated student code quality, software architecture designs, and adherence to design patterns and SDLC methodologies."
+]
+
+[[experience]]
+role = "Web Developer Intern"
+company = "Kasetsart University"
+period = "Jun 2025 - Jul 2025"
+location = "Bangkok, Thailand · Remote"
+highlights = [
+  "Collaborated with a developer team to redesign and rebuild the Department of Computer Engineering website.",
+  "Developed custom page templates and styled components using **PHP** and **Tailwind CSS** for the WordPress theme."
+]

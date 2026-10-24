@@ -1,0 +1,15 @@
+[[skills]]
+category = "Programming Languages"
+items = "Python, JavaScript/TypeScript, Go, Rust, C++, Java, PHP"
+
+[[skills]]
+category = "Frameworks & Libraries"
+items = "Django, Gin, Vue.js, Nuxt, React, Tailwind CSS, Rocket (Rust), Tauri 2.0"
+
+[[skills]]
+category = "Cloud, DevOps & Tools"
+items = "Terraform (IaC), Confluent Cloud & Kafka, GitHub Actions (CI/CD), Docker, Docker Compose, Git, SQL, MongoDB, pytest, Cypress, WordPress"
+
+[[skills]]
+category = "Languages"
+items = "Thai (Native), English (IELTS 7.5 overall)"

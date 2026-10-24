@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><!-- TITLE --> — JD Tailoring Workbench</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body
+        class="text-gray-900 font-sans bg-gray-100 print:bg-white print:text-black antialiased"
+    >
+        <!-- Top Workbench Bar (Hidden when printing) -->
+        <nav
+            class="print:hidden sticky top-0 z-30 bg-white border-b border-gray-200 px-4 py-2.5 shadow-sm flex flex-wrap items-center justify-between gap-3"
+        >
+            <div class="flex items-center gap-3">
+                <a
+                    href="index.html"
+                    class="text-xs font-medium text-gray-600 hover:text-gray-900 px-2.5 py-1.5 rounded border border-gray-300 hover:bg-gray-50"
+                >
+                    ← Back to Public Resume
+                </a>
+                <h1 class="text-sm font-bold text-gray-800">
+                    Resume Tailoring Workbench
+                </h1>
+            </div>
+
+            <!-- A4 Page Height Indicator -->
+            <div class="flex items-center gap-3 flex-1 max-w-xs">
+                <div class="w-full">
+                    <div class="flex justify-between mb-1">
+                        <span id="a4-meter-text" class="text-xs font-semibold text-emerald-700"
+                            >Calculating A4 height...</span
+                        >
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+                        <div
+                            id="a4-meter-bar"
+                            class="bg-emerald-500 h-2 rounded-full transition-all"
+                            style="width: 75%"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Presets & Actions -->
+            <div class="flex items-center gap-2">
+                <select
+                    id="preset-select"
+                    class="text-xs border border-gray-300 rounded px-2.5 py-1.5 bg-white text-gray-700"
+                >
+                    <option value="">-- Load Saved JD Preset --</option>
+                </select>
+                <button
+                    id="btn-save-preset"
+                    type="button"
+                    class="text-xs font-medium px-2.5 py-1.5 rounded border border-gray-300 text-gray-700 hover:bg-gray-50"
+                >
+                    Save Preset
+                </button>
+                <button
+                    id="btn-reset"
+                    type="button"
+                    class="text-xs font-medium px-2.5 py-1.5 rounded border border-red-200 text-red-600 hover:bg-red-50"
+                >
+                    Reset Default
+                </button>
+                <button
+                    id="btn-print"
+                    type="button"
+                    class="text-xs font-semibold px-3.5 py-1.5 rounded bg-blue-600 text-white hover:bg-blue-700 shadow-sm"
+                >
+                    Print / Export PDF
+                </button>
+            </div>
+        </nav>
+
+        <!-- Main Workbench Layout: Sidebar + Live A4 Preview -->
+        <div
+            class="max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-6 p-4 print:p-0 print:m-0 print:block"
+        >
+            <!-- Left Control Sidebar (Hidden when printing) -->
+            <div
+                class="print:hidden w-full lg:w-[440px] xl:w-[480px] flex-shrink-0 space-y-3 lg:max-h-[calc(100vh-4.5rem)] lg:overflow-y-auto pr-1"
+                id="customizer-controls"
+            ></div>
+
+            <!-- Right Live A4 Preview Area -->
+            <div class="flex-1 flex justify-center print:block">
+                <div
+                    id="resume-sheet"
+                    class="a4-print p-6 bg-white shadow-lg rounded-lg print:shadow-none print:rounded-none print:p-2 print:m-0 print:max-w-full print:w-full print:text-xs"
+                    style="width: 210mm; min-height: 297mm"
+                >
+<!-- HEADER -->
+                    <main class="resume-block">
+                        <div class="flex flex-col gap-8 print:gap-2">
+                            <section
+                                class="space-y-8 print:space-y-1 resume-block"
+                                data-container="main-sections"
+                            >
+<!-- MAIN_SECTIONS -->
+                            </section>
+                            <aside
+                                class="space-y-8 print:space-y-1 resume-block"
+                                data-container="aside-sections"
+                            >
+<!-- ASIDE_SECTIONS -->
+                            </aside>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+
+<!-- CUSTOMIZER_SCRIPT -->
+    </body>
+</html>

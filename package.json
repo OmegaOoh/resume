@@ -1,0 +1,10 @@
+{
+  "name": "resume",
+  "version": "2.0.0",
+  "description": "Modular static resume generator and JD tailoring workbench built with Bun, TypeScript, and TOML",
+  "scripts": {
+    "build": "bun run src/index.ts",
+    "dev": "bun run src/index.ts --dev",
+    "serve": "bun run src/index.ts --serve"
+  }
+}

@@ -1,0 +1,28 @@
+# Resume configuration
+# Controls the default ordering and visibility of sections on the main page (index.html)
+
+[[sections]]
+id = "summary"
+title = "Summary"
+enabled = true
+
+[[sections]]
+id = "skills"
+title = "Skills & Tools"
+enabled = true
+
+[[sections]]
+id = "experience"
+title = "Experience"
+enabled = true
+
+[[sections]]
+id = "projects"
+title = "Projects"
+enabled = true
+
+[[sections]]
+id = "education"
+title = "Education"
+enabled = true
+placement = "aside"
