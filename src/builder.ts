@@ -38,9 +38,10 @@ export async function buildResume(rootDir = process.cwd()): Promise<void> {
   console.log("Loading TOML content files...");
   const data = await loadResumeData(contentDir);
 
-  const [indexTemplate, customizeTemplate] = await Promise.all([
+  const [indexTemplate, customizeTemplate, customizerScript] = await Promise.all([
     Bun.file(join(templatesDir, "index.html")).text(),
     Bun.file(join(templatesDir, "customize.html")).text(),
+    renderCustomizerClientScript(data),
   ]);
 
   const pageTitle = `${escapeHtml(data.profile.name)} | Resume`;
@@ -56,11 +57,12 @@ export async function buildResume(rootDir = process.cwd()): Promise<void> {
     .map((s) => renderSectionById(s, data, false))
     .join("\n");
 
+  // Always use a function replacement () => value so JS $1 / $& patterns are never corrupted
   const indexHtml = indexTemplate
-    .replace("<!-- TITLE -->", pageTitle)
-    .replace("<!-- HEADER -->", renderHeader(data.profile, false))
-    .replace("<!-- MAIN_SECTIONS -->", staticMainSections)
-    .replace("<!-- ASIDE_SECTIONS -->", staticAsideSections);
+    .replace("<!-- TITLE -->", () => pageTitle)
+    .replace("<!-- HEADER -->", () => renderHeader(data.profile, false))
+    .replace("<!-- MAIN_SECTIONS -->", () => staticMainSections)
+    .replace("<!-- ASIDE_SECTIONS -->", () => staticAsideSections);
 
   // 2. Build Interactive JD Tailoring Workbench (customize.html)
   const interactiveMainSections = data.config.sections
@@ -74,11 +76,11 @@ export async function buildResume(rootDir = process.cwd()): Promise<void> {
     .join("\n");
 
   const customizeHtml = customizeTemplate
-    .replace("<!-- TITLE -->", pageTitle)
-    .replace("<!-- HEADER -->", renderHeader(data.profile, true))
-    .replace("<!-- MAIN_SECTIONS -->", interactiveMainSections)
-    .replace("<!-- ASIDE_SECTIONS -->", interactiveAsideSections)
-    .replace("<!-- CUSTOMIZER_SCRIPT -->", renderCustomizerClientScript(data));
+    .replace("<!-- TITLE -->", () => pageTitle)
+    .replace("<!-- HEADER -->", () => renderHeader(data.profile, true))
+    .replace("<!-- MAIN_SECTIONS -->", () => interactiveMainSections)
+    .replace("<!-- ASIDE_SECTIONS -->", () => interactiveAsideSections)
+    .replace("<!-- CUSTOMIZER_SCRIPT -->", () => customizerScript);
 
   await Promise.all([
     Bun.write(join(rootDir, "index.html"), indexHtml),

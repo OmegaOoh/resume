@@ -33,6 +33,7 @@ export function renderExperience(
       const roleAttrs = interactive ? ` data-exp-role="${expIdx}"` : "";
       const companyAttrs = interactive ? ` data-exp-company="${expIdx}"` : "";
       const periodAttrs = interactive ? ` data-exp-period="${expIdx}"` : "";
+      const ulAttrs = interactive ? ` data-exp-highlights-list="${expIdx}"` : "";
 
       return `                                <li class="resume-block${hiddenClass}"${itemAttrs}>
                                     <div
@@ -55,7 +56,7 @@ export function renderExperience(
                                         </p>
                                     </div>${locationLine}
                                     <ul
-                                        class="list-inside list-disc pl-5 mt-1 space-y-1 print:space-y-0 print:text-sm"
+                                        class="list-inside list-disc pl-5 mt-1 space-y-1 print:space-y-0 print:text-sm"${ulAttrs}
                                     >
 ${highlights}
                                     </ul>

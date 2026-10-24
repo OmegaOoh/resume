@@ -40,6 +40,7 @@ export function renderProjects(
       const itemAttrs = interactive ? ` data-proj-index="${projIdx}"` : "";
       const nameAttrs = interactive ? ` data-proj-name="${projIdx}"` : "";
       const periodAttrs = interactive ? ` data-proj-period="${projIdx}"` : "";
+      const ulAttrs = interactive ? ` data-proj-highlights-list="${projIdx}"` : "";
 
       return `                                <li class="resume-block${hiddenClass}"${itemAttrs}>
                                     <div
@@ -57,7 +58,7 @@ export function renderProjects(
                                         </p>
                                     </div>
                                     <ul
-                                        class="list-inside list-disc pl-5 mt-1 space-y-1 print:space-y-0 print:text-sm"
+                                        class="list-inside list-disc pl-5 mt-1 space-y-1 print:space-y-0 print:text-sm"${ulAttrs}
                                     >
 ${highlights}${repoLine}
                                     </ul>

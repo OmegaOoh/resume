@@ -163,71 +163,44 @@ li {
     }
 }
 
-/* Exact A4 Print Simulation for the Tailoring Workbench (.a4-preview-sheet) */
+/* Exact A4 Paper Canvas for the Tailoring Workbench */
 .a4-preview-sheet {
     width: 210mm;
     min-height: 297mm;
-    padding: 10mm;
+    padding: 12mm 14mm;
     box-sizing: border-box;
     background: white;
-    color: black;
-    font-size: 10px;
+    color: #111827;
     position: relative;
 }
 
-.a4-preview-sheet .header-layout {
-    margin-bottom: 0.5rem;
+/* Drag and drop interactive styles */
+.draggable-item {
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+.draggable-item.dragging {
+    opacity: 0.45;
+    transform: scale(0.99);
+}
+.draggable-item.drag-over-top {
+    border-top: 2px solid #4f46e5 !important;
+}
+.draggable-item.drag-over-bottom {
+    border-bottom: 2px solid #4f46e5 !important;
 }
 
-.a4-preview-sheet .contact-section {
-    gap: 0.5rem;
+/* Custom subtle scrollbars for workbench */
+.workbench-scroll::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
 }
-
-/* Mirror Tailwind print:* utilities inside .a4-preview-sheet on screen */
-.a4-preview-sheet .print\:text-2xl {
-    font-size: 1.5rem !important;
-    line-height: 2rem !important;
+.workbench-scroll::-webkit-scrollbar-track {
+    background: transparent;
 }
-.a4-preview-sheet .print\:text-lg {
-    font-size: 1.125rem !important;
-    line-height: 1.75rem !important;
+.workbench-scroll::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
 }
-.a4-preview-sheet .print\:text-base {
-    font-size: 1rem !important;
-    line-height: 1.5rem !important;
-}
-.a4-preview-sheet .print\:text-sm {
-    font-size: 0.875rem !important;
-    line-height: 1.25rem !important;
-}
-.a4-preview-sheet .print\:text-xs {
-    font-size: 10px !important;
-}
-.a4-preview-sheet .print\:mt-1 {
-    margin-top: 0.25rem !important;
-}
-.a4-preview-sheet .print\:my-2 {
-    margin-top: 0.5rem !important;
-    margin-bottom: 0.5rem !important;
-}
-.a4-preview-sheet .print\:mb-1 {
-    margin-bottom: 0.25rem !important;
-}
-.a4-preview-sheet .print\:gap-2 {
-    gap: 0.5rem !important;
-}
-.a4-preview-sheet .print\:w-4 {
-    width: 1rem !important;
-}
-.a4-preview-sheet .print\:h-4 {
-    height: 1rem !important;
-}
-.a4-preview-sheet .print\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
-    margin-top: 0px !important;
-}
-.a4-preview-sheet .print\:space-y-1 > :not([hidden]) ~ :not([hidden]) {
-    margin-top: 0.25rem !important;
-}
-.a4-preview-sheet .print\:space-y-2 > :not([hidden]) ~ :not([hidden]) {
-    margin-top: 0.5rem !important;
+.workbench-scroll::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
 }
