@@ -1,18 +1,50 @@
 [[projects]]
-name = "KU-Work"
+name = "KU-Work — Campus Job Board Platform"
 period = "Aug 2025 - Nov 2025"
 repository = "https://github.com/Yet-Another-Software-Team/ku-work"
+enabled = true
 highlights = [
-  "Led a 4-person team to develop a job-seeking platform using **Gin** (Go) for backend APIs and **Nuxt** (Vue.js) for frontend UI.",
-  "Implemented RESTful backend endpoints and authentication workflows supporting password credentials and Google OAuth 2.0.",
-  "Managed project delivery using Agile practices, conducting sprint planning, pull request code reviews, and CI integrations."
+  "Coordinated a 4-person team to build a full-stack job-seeking platform using **Go (Gin, GORM)**, **Nuxt (Vue.js)**, **PostgreSQL**, and **Docker Compose**.",
+  "Implemented RESTful backend APIs and authentication workflows supporting **JWT**, **Google OAuth 2.0**, and **Redis**-backed session management and rate limiting.",
+  "Managed Agile sprint planning, conducted pull request code reviews, and resolved static security findings flagged by **`gosec`** in CI pipelines."
 ]
 
 [[projects]]
-name = "Traffic Flow Analysis"
+name = "ArchDiver — AI-Assisted Architectural Smell Analyzer"
+period = "Jan 2026 - May 2026"
+repository = "https://github.com/Yet-Another-Software-Team/ArchDiver"
+enabled = false
+highlights = [
+  "Developed a cross-language CLI static analysis tool in **C# (.NET)** and **Python** that parses C#, Java, and Python ASTs via **Tree-sitter** into a unified dependency graph.",
+  "Integrated **ONNX Runtime** to run **GraphSAGE** graph neural network inference for detecting architectural smells (e.g., feature concentration), packaged as a self-contained single-file executable with unit test coverage."
+]
+
+[[projects]]
+name = "Traffic Flow Analysis — Traffic Forecasting Web App"
 period = "Apr 2025"
 repository = "https://github.com/OmegaOoh/traffic-flow-analysis"
+enabled = false
 highlights = [
-  "Developed a web application for traffic flow analysis using **Vue.js** frontend and **Rocket (Rust)** backend API.",
-  "Trained a traffic prediction model using **PyTorch** recurrent neural networks (RNNs) to forecast vehicle movement patterns."
+  "Built a traffic analysis and forecasting web application using a **Rust (Rocket)** backend API, **MySQL**, and a **Vue.js** frontend, supported by **GitHub Actions** unit test workflows.",
+  "Trained a **PyTorch** Gated Recurrent Unit (GRU) neural network on historical vehicle count and weather data, serving model predictions from the Rust backend via **LibTorch (`tch-rs`)**."
+]
+
+[[projects]]
+name = "Ops-Lens — Terminal Log Monitoring Dashboard"
+period = "2026"
+repository = "https://github.com/OmegaOoh/ops-lens"
+enabled = false
+highlights = [
+  "Built a lightweight terminal UI (TUI) application in **Rust** for real-time log tailing and stream monitoring.",
+  "Implemented configurable TOML keybindings and case-insensitive pattern matching for live log-level classification and count aggregation."
+]
+
+[[projects]]
+name = "KU-Tangtee — Campus Event & Activity Hub"
+period = "Oct 2024 - Dec 2024"
+repository = "https://github.com/OmegaOoh/ku-tangtee"
+enabled = false
+highlights = [
+  "Developed a full-stack web application for Kasetsart University students to organize campus events and study groups using **Django** and **Vue.js**.",
+  "Implemented real-time group chat using **WebSockets**, **Google OAuth** login, and automated CI pipelines (`pytest`, `flake8`, `mypy`, `Jest`, and `Codecov`)."
 ]

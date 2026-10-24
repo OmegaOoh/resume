@@ -1,5 +1,12 @@
+# Default Summary: Tuned for Fresh Grad Backend / Cloud / DevOps / Software Engineer roles
 content = """
-Software and Knowledge Engineering student and Application Developer Intern at ExxonMobil.
-Experienced in full-stack web development (Gin, Nuxt, Django), cloud automation & event streaming (Terraform, Confluent Cloud & Kafka, GitHub Actions), and AI-integrated applications (PyTorch, Rust).
-Strong background in software design patterns, SDLC practices, and technical mentoring.
+Final-year Software and Knowledge Engineering student at Kasetsart University and Application Developer Intern at ExxonMobil. Hands-on experience automating cloud infrastructure and event-streaming platforms (**Terraform**, **Confluent Kafka**, **GitHub Actions**) and building backend and full-stack web applications (**Go/Gin**, **Python/Django**, **Vue/Nuxt**, **PostgreSQL**, **Redis**). Grounded in software design principles, automated testing, and collaborative Agile delivery.
 """
+
+# Optional variants you can copy into `content` above or use in Resume Studio (customize.html):
+#
+# [Full-Stack Software Engineer Variant]
+# Final-year Software and Knowledge Engineering student at Kasetsart University and Application Developer Intern at ExxonMobil. Experienced in building end-to-end web applications (**Go/Gin**, **Django**, **Vue/Nuxt**, **PostgreSQL**, **Redis**) and automating cloud deployments (**Terraform**, **Confluent Kafka**, **GitHub Actions**, **Docker**). Focused on clean architecture, automated testing, and Agile team delivery.
+#
+# [AI & Systems Engineering Variant]
+# Final-year Software and Knowledge Engineering student at Kasetsart University and Application Developer Intern at ExxonMobil. Experienced in integrating machine learning models into backend and CLI systems (**PyTorch**, **ONNX Runtime**, **Rust/Rocket**, **C#/.NET**) alongside cloud infrastructure automation (**Terraform**, **Confluent Kafka**, **GitHub Actions**).

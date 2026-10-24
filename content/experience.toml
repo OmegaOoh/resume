@@ -4,18 +4,18 @@ company = "ExxonMobil"
 period = "Jun 2026 - Present"
 location = "Bangkok, Thailand · On-site"
 highlights = [
-  "Developed automated Infrastructure as Code (IaC) solutions using **Terraform** to provision and configure **Confluent Kafka** infrastructure on **Confluent Cloud** within the APIM & Event Streaming team.",
-  "Built multi-job **GitHub Actions** CI/CD workflows for automated validation, syntax checking, and deployment of infrastructure configurations."
+  "Developed a **Terraform** codebase and managed state configurations to provision and continuously update **Confluent Cloud (Apache Kafka)** resources—including service accounts, schemas, topics, and ACLs/RBAC—within the team's event streaming platform.",
+  "Built multi-stage **GitHub Actions** CI/CD workflows to automate plan checks and infrastructure deployments, reducing manual restoration overhead and configuration drift."
 ]
 
 [[experience]]
 role = "Teaching Assistant"
 company = "Kasetsart University"
 period = "Aug 2025 - Apr 2026"
-location = "Individual Software Development Process & Principal of Software Design"
+location = "Individual Software Development Process & Principles of Software Design"
 highlights = [
-  "Mentored 60+ undergraduate students across Individual Software Development Process and Principal of Software Design courses.",
-  "Evaluated student code quality, software architecture designs, and adherence to design patterns and SDLC methodologies."
+  "Guided 60+ undergraduate students as part of the course teaching team, conducting weekly project reviews on SDLC practices, requirement tracking, and Agile iteration planning.",
+  "Reviewed student codebases and architecture diagrams to provide constructive feedback on object-oriented design patterns, code maintainability, and testing."
 ]
 
 [[experience]]
@@ -24,6 +24,6 @@ company = "Kasetsart University"
 period = "Jun 2025 - Jul 2025"
 location = "Bangkok, Thailand · Remote"
 highlights = [
-  "Collaborated with a developer team to redesign and rebuild the Department of Computer Engineering website.",
-  "Developed custom page templates and styled components using **PHP** and **Tailwind CSS** for the WordPress theme."
+  "Collaborated with the development team to redesign the Department of Computer Engineering website, improving information layout and mobile responsiveness.",
+  "Developed custom **WordPress** page templates and reusable UI components (including the SKE program overview) using **PHP** and **Tailwind CSS**."
 ]
